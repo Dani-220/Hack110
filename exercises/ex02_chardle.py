@@ -4,7 +4,10 @@ __author__ = "730810493"
 
 
 def main() -> None:
-    contains_char(word=input_word(), letter=input_letter())
+    "Entry point for the chardle game"
+    contains_char(
+        word=input_word(), letter=input_letter()
+    )  # Calls the contains_char function with the input_word and input_letter functions as arguements.
 
 
 def input_word() -> str:
@@ -48,29 +51,32 @@ def contains_char(word: str, letter: str) -> None:
     if (
         letter == word[0]
     ):  # Searches each index of the letter and prints a string if the letter is found at the index. Also adds one to the variable count if a match is found.
-        print(letter + " found at index 1")
+        print(letter + " found at index 0")
         count += 1
     if letter == word[1]:
-        print(letter + " found at index 2")
+        print(letter + " found at index 1")
         count += 1
     if letter == word[2]:
-        print(letter + " found at index 3")
+        print(letter + " found at index 2")
         count += 1
     if letter == word[3]:
-        print(letter + " found at index 4")
+        print(letter + " found at index 3")
         count += 1
     if letter == word[4]:
-        print(letter + " found at index 5")
+        print(letter + " found at index 4")
         count += 1
     if (
         count == 0
     ):  # If no instances of the letter is found a string is printed notifying the user.
         print("No instances of " + letter + " found in " + word)
-    if count == 1:
-        print(str(count) + " instance of " + letter + " found in " + word)
-    else:  # If instances of the letter is found the user is notified with the string below.
-        print(str(count) + " instances of " + letter + " found in " + word)
+
+    else:  # If instances of the letter is found the user is notified with one the strings below.
+        if count == 1:  # Notifies with this string if 1 match is found.
+            print(str(count) + " instance of " + letter + " found in " + word)
+        else:  # Notifies with this string if more than one match is found.
+            print(str(count) + " instances of " + letter + " found in " + word)
 
 
 if __name__ == "__main__":
     main()
+# Necessary for the code to run.
