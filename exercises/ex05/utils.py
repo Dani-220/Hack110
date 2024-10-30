@@ -28,7 +28,7 @@ def sub(input: list[int], start: int, end: int) -> list[int]:
     index: int = 0  # Index used for tracking the while loop.
     while index < len(input):
         if (
-            index >= start and index <= end
+            index >= start and index < end
         ):  # If the index is within the start and end range then the element of the list is append to the output placeholder.
             output.append(input[index])
         index += 1  # Updates the index variable.
