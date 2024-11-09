@@ -19,11 +19,26 @@ body {
 h1, h2 {
     color: #004B87; /* Carolina Blue */
 }
+
+.about_page {
+    font-size: 300%;
+    color: #004B87; /* Carolina Blue */
+}
+
+h3 {
+    margin-top: 2%;
+}
+
+#light { 
+    color: #ADD8E6 /* Color for UNC in the Header */
+}
+
 /* Content */
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 1%;
 }
 
 nav ul li {
@@ -37,6 +52,13 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li a:hover {
+    text-decoration: none;
+    color: #004B87;
+    font-weight: bold;
+    background-color: #FFFDD0;
+}
+
 header {
     background-color: #f8f8f8;
     padding: 20px 0;
@@ -48,7 +70,57 @@ header {
     padding: 50px 0;
     background-color: #eef5ff;
 }
+ /* Formating for the colums on the index page */
+ .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
+/* Image Formating *Used W3Schools For Reference* */ 
+
+.headimg {
+    max-width: 2%;
+    height: 2%;
+    background-color: transparent; 
+    background: none;
+}
+
+.indeximg {
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-top: 10%;
+    max-width: 90%;
+    max-height: 330px;
+    border-radius: 25px;
+    margin: center;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+
+.center {
+    margin: auto;
+    margin-top: 3%;
+    width: 50%;
+    border: 3px solid gold;
+    background-color: gold;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Content that we have to change */
 button {
     background-color: #004B87;
     color: white;
@@ -87,3 +159,4 @@ form input, form textarea {
     border-radius: 5px;
     border: 1px solid #ddd;
 }
+
