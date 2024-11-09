@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volunteer UNC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Volunteer UNC</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="post.html">Post Opportunity</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="post-opportunity">
+            <div class="container">
+                <h2>Post a Volunteer Opportunity</h2>
+                <form id="opportunity-form">
+                    <label for="title">Opportunity Title:</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+
+                    <button type="submit">Post Opportunity</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section to display posted opportunities -->
+        <section id="posted-opportunities">
+            <div class="container">
+                <h2>Posted Opportunities</h2>
+                <div class="opportunities-list">
+                    <!-- Opportunities will be appended here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

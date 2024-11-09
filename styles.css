@@ -1,0 +1,89 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #004B87; /* Carolina Blue */
+}
+/* Content */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #004B87;
+    font-weight: bold;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    border-bottom: 2px solid #004B87;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #eef5ff;
+}
+
+button {
+    background-color: #004B87;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.opportunities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opportunity-item {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
