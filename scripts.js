@@ -15,42 +15,22 @@ document.getElementById('opportunity-form').addEventListener('submit', function 
         location: location
     };
 
-    // Get the existing opportunities from localStorage, or initialize an empty array if none
-    let opportunities = JSON.parse(localStorage.getItem('opportunities')) || [];
+    // Get the existing opportunities from localStorage, or initialize an empty array if none. Used https://www.youtube.com/watch?v=fYTTUBa-lPc as a tutorial and also https://www.youtube.com/watch?v=iiADhChRriM
+    let h2.innerHTML = JSON.parse(localStorage.getItem('opportunities')) || [];
 
     // Add the new opportunity to the array
-    opportunities.push(opportunity);
+    h2.innerHTML.push(opportunity);
 
     // Save the updated array of opportunities back to localStorage
-    localStorage.setItem('opportunities', JSON.stringify(opportunities));
-
-    // Add the new opportunity to the page (for immediate display without reloading)
-    displayOpportunities(opportunities);
+    function display() {
+    localStorage.setItem('opportunities', JSON.stringify(opportunity));
+    h2.innerHTML = localstorage.getItem("opportunities")
+}
 
     // Clear the form fields after submission
     document.getElementById('opportunity-form').reset();
 });
 
-// Function to display opportunities on the page
-function displayOpportunities(opportunities) {
-    const opportunityList = document.querySelector('.opportunities-list');
-    opportunityList.innerHTML = ''; // Clear existing opportunities
-
-    // Loop through the stored opportunities and display them
-    opportunities.forEach(opportunity => {
-        const opportunityItem = document.createElement('div');
-        opportunityItem.classList.add('opportunity-item');
-
-        opportunityItem.innerHTML = `
-            <h3>${opportunity.title}</h3>
-            <p><strong>Date:</strong> ${opportunity.date}</p>
-            <p><strong>Location:</strong> ${opportunity.location}</p>
-            <p>${opportunity.description}</p>
-        `;
-
-        opportunityList.appendChild(opportunityItem);
-    });
-}
 
 // Load and display opportunities when the page loads
 document.addEventListener('DOMContentLoaded', function () {
