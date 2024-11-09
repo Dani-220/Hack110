@@ -33,7 +33,7 @@ document.getElementById('opportunity-form').addEventListener('submit', function 
     // Add the new opportunity to the page (for immediate display without reloading)
     displayOpportunities(updatedOpportunities);
 
-    // Clear the form fields after submission
+    // Clear the form after submission
     document.getElementById('opportunity-form').reset();
 });
 
@@ -51,11 +51,11 @@ function displayOpportunities(opportunities) {
     document.getElementById('output').innerHTML = output;
 }
 
-// Initial display of opportunities on page load
+// Initial display of opportunities 
 function display() {
     if (localStorage.getItem('opportunities') != null) {
         const opportunities = JSON.parse(localStorage.getItem('opportunities'));
         displayOpportunities(opportunities);
     }
 }
-display(); // Call on page load
+display(); // Call on page
